@@ -52,14 +52,23 @@ class AppContexts {
     Object getBean(String key) {
         return map.get(key);
     }
+    Object getBean(Class clazz){//byType
+        for(Object obj : map.values()){
+            if(clazz.isInstance(obj))
+                return obj;
+        }
+        return null;
+    }
 }
 
 public class MyTestMain1 {
     public static void main(String[] args) throws Exception {
         AppContexts ac = new AppContexts();
-        Company company = (Company) ac.getBean("samsung");
+        Company company = (Company) ac.getBean("samsung"); // byName으로 객체를 검색
+        Company company2 = (Company) ac.getBean(Samsung.class); // byType으로 객체를 검색
         People people = (People) ac.getBean("people");
         System.out.println("people = " + people);
         System.out.println("company = " + company);
+        System.out.println("company2 = " + company2);
     }
 }
