@@ -1,0 +1,4 @@
+car=com.fastcampus.ch3.diCopy2.Truck
+engine=com.fastcampus.ch3.diCopy2.Engine
+company=com.fastcampus.ch3.diMyTest1.Samsung
+people=com.fastcampus.ch3.diMyTest1.People
