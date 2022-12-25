@@ -54,7 +54,7 @@ class AppContexts {
     }
 }
 
-public class MyTestMain {
+public class MyTestMain1 {
     public static void main(String[] args) throws Exception {
         AppContexts ac = new AppContexts();
         Company company = (Company) ac.getBean("samsung");
