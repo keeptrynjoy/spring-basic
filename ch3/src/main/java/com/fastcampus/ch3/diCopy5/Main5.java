@@ -24,6 +24,7 @@ import java.util.Set;
                 ", door=" + door +
                 '}';
     }
+
 }
 @Component class Truck extends Car{}
 @Component class Engine {}
